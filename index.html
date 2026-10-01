@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark Joseph Lozada | Principal Architect & Full-Stack Engineer</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#0b0f0e',
+                        cardSurface: '#121917',
+                        cardHover: '#182421',
+                        accentGreen: '#10b981',
+                        accentGlow: 'rgba(16, 185, 129, 0.3)',
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
+    <style>
+         ::-webkit-scrollbar {
+            width: 6px;
+        }
+        
+         ::-webkit-scrollbar-track {
+            background: #0b0f0e;
+        }
+        
+         ::-webkit-scrollbar-thumb {
+            background: #10b981;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+
+<body class="bg-darkBg text-zinc-100 font-sans antialiased selection:bg-emerald-600 selection:text-white min-h-screen">
+
+    <!-- Top Navigation -->
+    <header class="fixed top-0 inset-x-0 bg-darkBg/90 backdrop-blur-xl border-b border-zinc-800/80 z-50">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <a href="#home" class="flex items-center gap-2">
+                <div class="w-9 h-9 rounded-lg bg-emerald-500 flex items-center justify-center text-darkBg font-black text-sm tracking-tighter shadow-[0_0_15px_rgba(16,185,129,0.4)]">
+                    MJ
+                </div>
+                <span class="font-extrabold tracking-wider text-sm text-white">MARK.</span>
+            </a>
+
+            <nav class="hidden md:flex items-center gap-8 text-xs font-semibold tracking-wider uppercase text-zinc-400">
+                <a href="#home" class="hover:text-emerald-400 transition-colors">Home</a>
+                <a href="#about" class="hover:text-emerald-400 transition-colors">About Us</a>
+                <a href="#projects" class="hover:text-emerald-400 transition-colors">Project</a>
+                <a href="#services" class="hover:text-emerald-400 transition-colors">Service</a>
+                <a href="#contact" class="hover:text-emerald-400 transition-colors">Contact Us</a>
+            </nav>
+
+
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6 pt-32 pb-20 space-y-12" id="home">
+
+        <!-- Hero Section -->
+        <section class="relative rounded-3xl bg-cardSurface border border-emerald-500/20 p-8 md:p-16 overflow-hidden shadow-2xl">
+            <div class="absolute right-0 top-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-block border border-emerald-500/40 px-3 py-1.5 rounded-md bg-emerald-500/10">
+                        <span class="text-emerald-400 font-bold tracking-widest text-[11px] uppercase block">Hello There!</span>
+                    </div>
+
+                    <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white leading-[1.1]">
+                        Innovative IT Solutions<br>
+                        <span class="text-emerald-400">That Drive Results</span>
+                    </h1>
+
+                    <p class="text-zinc-400 text-sm md:text-base leading-relaxed max-w-xl font-normal">
+                        At Mark Solutions, we combine cutting-edge technology with deep industry insight to deliver IT solutions that solve real problems, boost efficiency, and accelerate business growth. Our innovation is focused on impact—helping you achieve measurable results.
+                    </p>
+
+                    <div class="flex items-center gap-4 pt-2">
+                        <a href="#projects" class="px-6 py-3 rounded-full bg-zinc-100 hover:bg-white text-darkBg font-bold text-xs tracking-wider uppercase transition-all flex items-center gap-2 shadow-lg">
+                            <span>View Our Portfolio</span>
+                            <span class="w-5 h-5 rounded-full bg-darkBg text-white flex items-center justify-center text-[10px]">▶</span>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5 flex justify-center relative">
+                    <div class="relative w-full max-w-md aspect-square flex items-center justify-center p-4">
+                        <!-- Custom green blob mask background -->
+                        <div class="absolute inset-0 bg-emerald-500 rounded-[60%_40%_70%_30%/50%_70%_30%_50%] opacity-90 shadow-[0_0_40px_rgba(16,185,129,0.3)] animate-pulse"></div>
+
+                        <!-- Floating UI Badge top right -->
+                        <div class="absolute top-6 right-2 z-20 bg-darkBg/90 backdrop-blur-md border border-emerald-500/30 px-3 py-1 rounded-full text-[10px] font-bold tracking-wider text-emerald-400 uppercase shadow-lg">
+                            UI/UX Design
+                        </div>
+
+                        <!-- Floating Product Design Badge bottom center -->
+                        <div class="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 bg-darkBg/90 backdrop-blur-md border border-emerald-500/30 px-4 py-1.5 rounded-full text-[10px] font-bold tracking-wider text-emerald-400 uppercase shadow-lg flex items-center gap-1.5">
+                            <span>✦</span> Product Design
+                        </div>
+
+                        <!-- Profile Image with background removed & object-fit contain/top alignment so head isn't cut off -->
+                        <div class="w-[85%] h-[85%] rounded-2xl overflow-hidden relative z-10 shadow-2xl flex items-end justify-center bg-transparent">
+                            <img src="/pic/fe33a9d1-c80b-4c72-8dfc-231a150f8031-removebg-preview.png" alt="Mark Joseph Lozada" class="w-full h-full object-contain object-bottom filter contrast-110">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category Links Strip -->
+            <div class="grid grid-cols-2 sm:grid-cols-5 gap-4 mt-16 p-4 rounded-xl bg-emerald-500 text-darkBg font-bold tracking-wider text-xs uppercase items-center shadow-lg">
+                <a href="#services" class="text-center hover:opacity-80 transition-opacity flex items-center justify-center gap-1.5"><span>▾</span> App Design</a>
+                <a href="#services" class="text-center hover:opacity-80 transition-opacity flex items-center justify-center gap-1.5"><span>▾</span> Wireframes</a>
+                <a href="#services" class="text-center hover:opacity-80 transition-opacity flex items-center justify-center gap-1.5"><span>▾</span> Web Design</a>
+                <a href="#services" class="text-center hover:opacity-80 transition-opacity flex items-center justify-center gap-1.5"><span>▾</span> Dashboard</a>
+                <a href="#services" class="text-center hover:opacity-80 transition-opacity flex items-center justify-center gap-1.5 col-span-2 sm:col-span-1"><span>▾</span> Logo Design</a>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="space-y-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-zinc-800 pb-6">
+                <div>
+                    <span class="text-emerald-400 font-mono text-xs uppercase tracking-widest block mb-1">Service</span>
+                    <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-white">Delivering Value Through Our Services</h2>
+                </div>
+                <div>
+                    <a href="#services" class="text-xs font-semibold text-emerald-400 hover:underline">View All Service →</a>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <div class="bg-cardSurface border border-zinc-800 rounded-2xl p-6 space-y-4 hover:border-emerald-500 transition-all">
+                    <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400">💻</div>
+                    <h3 class="font-bold text-white text-base">UI/UX Design</h3>
+                    <p class="text-xs text-zinc-400 leading-relaxed">We design clean, user-friendly interfaces that enhance user experience and drive results.</p>
+                    <a href="#contact" class="inline-block text-xs font-bold text-emerald-400 hover:text-emerald-300 pt-2">Read More →</a>
+                </div>
+                <div class="bg-cardSurface border border-zinc-800 rounded-2xl p-6 space-y-4 hover:border-emerald-500 transition-all">
+                    <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400">📱</div>
+                    <h3 class="font-bold text-white text-base">App Design</h3>
+                    <p class="text-xs text-zinc-400 leading-relaxed">We design sleek, user-friendly mobile apps that deliver smooth experiences and keep users engaged.</p>
+                    <a href="#contact" class="inline-block text-xs font-bold text-emerald-400 hover:text-emerald-300 pt-2">Read More →</a>
+                </div>
+                <div class="bg-cardSurface border border-zinc-800 rounded-2xl p-6 space-y-4 hover:border-emerald-500 transition-all">
+                    <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400">🌐</div>
+                    <h3 class="font-bold text-white text-base">UI/UX Design</h3>
+                    <p class="text-xs text-zinc-400 leading-relaxed">We craft responsive, modern websites that look great and perform flawlessly across all devices.</p>
+                    <a href="#contact" class="inline-block text-xs font-bold text-emerald-400 hover:text-emerald-300 pt-2">Read More →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="rounded-3xl bg-cardSurface border border-zinc-800 p-8 md:p-16 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-5 flex justify-center relative">
+                <div class="relative w-full max-w-sm aspect-square flex items-center justify-center p-4">
+                    <div class="absolute inset-0 bg-emerald-500 rounded-[50%_50%_60%_40%/60%_40%_60%_40%] opacity-90 shadow-[0_0_30px_rgba(16,185,129,0.3)]"></div>
+                    <div class="w-[85%] h-[85%] rounded-2xl overflow-hidden relative z-10 shadow-2xl flex items-end justify-center bg-transparent">
+                        <img src="/pic/fe33a9d1-c80b-4c72-8dfc-231a150f8031-removebg-preview.png" alt="About Profile" class="w-full h-full object-contain object-bottom">
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-7 space-y-6">
+                <span class="text-emerald-400 font-mono text-xs uppercase tracking-widest block">About us</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white tracking-tight">
+                    The Story Behind <span class="text-emerald-400">Mark Solutions</span>
+                </h2>
+                <p class="text-zinc-400 text-xs md:text-sm leading-relaxed">
+                    Mark Solutions began with a simple mission—to turn ideas into impactful solutions. Today, we help businesses grow through smart design, innovation, and a user-first approach.
+                </p>
+
+
+            </div>
+        </section>
+
+        <!-- Recent Projects Section -->
+        <section id="projects" class="space-y-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-zinc-800 pb-6">
+                <div>
+                    <span class="text-emerald-400 font-mono text-xs uppercase tracking-widest block mb-1">My Work</span>
+                    <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-white">RECENT PROJECT</h2>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Project 1 -->
+                <div class="bg-cardSurface border border-zinc-800 rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-emerald-500 transition-all duration-300">
+                    <div>
+                        <div class="h-48 overflow-hidden bg-zinc-900 border-b border-zinc-800">
+                            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=600" alt="QR Scanner" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-6 space-y-2">
+                            <span class="text-[10px] uppercase font-mono text-emerald-400 tracking-wider">Website Design</span>
+                            <h3 class="text-lg font-bold text-white">QR Scanner Web App</h3>
+                            <p class="text-xs text-zinc-400">Web Design, App Design</p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0 flex justify-end">
+                        <a href="https://markqrscanner.netlify.app" target="_blank" class="w-8 h-8 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center hover:bg-emerald-500 hover:text-darkBg transition-all">→</a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-cardSurface border border-zinc-800 rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-emerald-500 transition-all duration-300">
+                    <div>
+                        <div class="h-48 overflow-hidden bg-zinc-900 border-b border-zinc-800">
+                            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=600" alt="QR Scanner" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-6 space-y-2">
+                            <span class="text-[10px] uppercase font-mono text-emerald-400 tracking-wider">Website Design</span>
+                            <h3 class="text-lg font-bold text-white">Thesis Buddy</h3>
+                            <p class="text-xs text-zinc-400">Web Design, App Design</p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0 flex justify-end">
+                        <a href="https://datacomputing.vercel.app" target="_blank" class="w-8 h-8 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center hover:bg-emerald-500 hover:text-darkBg transition-all">→</a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-cardSurface border border-zinc-800 rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-emerald-500 transition-all duration-300">
+                    <div>
+                        <div class="h-48 overflow-hidden bg-zinc-900 border-b border-zinc-800">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=600" alt="Upcoming System" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-6 space-y-2">
+                            <span class="text-[10px] uppercase font-mono text-emerald-400 tracking-wider">Website Design</span>
+                            <h3 class="text-lg font-bold text-white">Upcoming System Concept</h3>
+                            <p class="text-xs text-zinc-400">Web Design, App Design</p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0 flex justify-end">
+                        <span class="w-8 h-8 rounded-full bg-zinc-800 text-zinc-400 flex items-center justify-center">→</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="pt-8">
+            <div class="rounded-3xl bg-gradient-to-br from-cardSurface to-darkBg border border-zinc-800 p-8 md:p-16 shadow-2xl relative overflow-hidden">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+                    <div class="lg:col-span-5 space-y-6">
+                        <span class="text-emerald-400 font-mono text-xs uppercase tracking-widest block">Get In Touch</span>
+                        <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-white">Let's Work Together</h2>
+                        <p class="text-xs text-zinc-400 leading-relaxed">
+                            I'm currently open for tech projects, collaborations, or inquiries. Let's build something amazing that drives real results.
+                        </p>
+                        <div class="space-y-1 font-mono text-xs text-zinc-400 pt-2 border-t border-zinc-800">
+                            <p>📍 Dasmariñas, Cavite, Philippines</p>
+                            <p>✉️ markjoseph.lozada@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-7">
+                        <form id="contactForm" novalidate class="space-y-4">
+                            <div>
+                                <input class="w-full bg-darkBg border border-zinc-800 focus:border-emerald-500 text-white rounded-xl px-4 py-3.5 text-xs focus:outline-none transition-all placeholder:text-zinc-600" type="text" placeholder="Full Name" id="validationName" required>
+                            </div>
+                            <div>
+                                <input class="w-full bg-darkBg border border-zinc-800 focus:border-emerald-500 text-white rounded-xl px-4 py-3.5 text-xs focus:outline-none transition-all placeholder:text-zinc-600" type="email" placeholder="E-mail Address" id="validationEmail" required>
+                            </div>
+                            <div>
+                                <textarea class="w-full bg-darkBg border border-zinc-800 focus:border-emerald-500 text-white rounded-xl px-4 py-3.5 text-xs focus:outline-none transition-all placeholder:text-zinc-600" placeholder="Your Message" id="validationMessage" rows="4" required></textarea>
+                            </div>
+                            <button class="w-full bg-emerald-500 hover:bg-emerald-400 text-darkBg font-bold text-xs uppercase tracking-widest py-3.5 rounded-xl shadow-[0_0_20px_rgba(16,185,129,0.4)] transition-all" type="submit">
+                                Submit Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center pt-8 border-t border-zinc-800 text-xs text-zinc-500">
+            <p>© 2026 Mark Joseph Lozada. All Rights Reserved.</p>
+        </footer>
+
+    </main>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            if (typeof emailjs !== 'undefined') {
+                emailjs.init("mwIY8anwdQX9nQvEG");
+            }
+
+            const form = document.getElementById('contactForm');
+            const nameField = document.getElementById('validationName');
+            const emailField = document.getElementById('validationEmail');
+            const messageField = document.getElementById('validationMessage');
+
+            if (form) {
+                form.addEventListener('submit', async function(e) {
+                    e.preventDefault();
+
+                    const name = nameField.value.trim();
+                    const email = emailField.value.trim();
+                    const messageText = messageField.value.trim();
+
+                    if (!name || !email || !messageText) {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Error!',
+                            text: 'Please fill out all fields.',
+                            confirmButtonColor: '#10b981',
+                            background: '#121917',
+                            color: '#fff'
+                        });
+                        return;
+                    }
+
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailRegex.test(email)) {
+                        Swal.fire({
+                            icon: 'warning',
+                            title: 'Invalid Email',
+                            text: 'Please enter a valid email address.',
+                            confirmButtonColor: '#10b981',
+                            background: '#121917',
+                            color: '#fff'
+                        });
+                        return;
+                    }
+
+                    const templateParams = {
+                        from_name: name,
+                        from_email: email,
+                        message: messageText
+                    };
+
+                    try {
+                        await emailjs.send("service_o17x5m5a", "template_up1un8d", templateParams);
+                        Swal.fill ? .(); // safe fallback
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Success!',
+                            text: 'Message sent successfully.',
+                            confirmButtonColor: '#10b981',
+                            background: '#121917',
+                            color: '#fff'
+                        });
+                        form.reset();
+                    } catch (error) {
+                        console.error('EmailJS error:', error);
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Failed!',
+                            text: 'Could not send message. Please try again later.',
+                            confirmButtonColor: '#10b981',
+                            background: '#121917',
+                            color: '#fff'
+                        });
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
